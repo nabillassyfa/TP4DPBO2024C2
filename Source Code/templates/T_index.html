@@ -1,0 +1,141 @@
+<!-- // Saya Nabilla Assyfa Ramadhani [2205297] 
+// mengerjakan TP4
+// dalam mata Desain dan Pemograman Berorientasi Objek 
+// untuk keberkahanNya maka saya tidak melakukan kecurangan 
+// seperti yang telah dispesifikasikan. 
+// Aamiin -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      * {
+          margin: 0;
+          padding: 0;
+          text-decoration: none;
+          list-style-type: none;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+      th, td {
+          padding: 10px 5px;
+      }
+    
+      .btn a {
+          text-decoration: none; /* Menghilangkan garis bawah */
+          color: inherit; /* Mewarisi warna teks dari parent (dalam hal ini warna default teks tombol) */
+      }
+  </style>
+    <title>TP4 DPBO 2024</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">Data Atlte</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cabang.php">Cabang Lomba</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="turnamen.php">Turnamen</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-4">
+      <div class="col-1 my-3">
+        <button type="button" class="btn btn-primary nav-link active" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add New</button>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <form action="index.php" method="post" enctype="multipart/form-data">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Data Atlet</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <input type="hidden" name="id">
+              <div class="row mb-5">
+                  <div class="col-12">
+                      <div class="card px-3">
+                          <table border="0" class="text-start">
+                              <tr>
+                                  <td>Nama</td>
+                                  <td>:</td>
+                                  <td><input type="text" name="name" class="form-control me-2"></td>
+                              </tr>
+                              <tr>
+                                  <td>Email</td>
+                                  <td>:</td>
+                                  <td><input type="email" name="email"  class="form-control me-2"></td>
+                              </tr>
+                              <tr>
+                                  <td>No Handphone</td>
+                                  <td>:</td>
+                                  <td><input type="text" name="phone"  class="form-control me-2"></td>
+                              </tr>
+                              <tr>
+                                  <td>Tanggal Gabung</td>
+                                  <td>:</td>
+                                  <td><input type="date" name="join_date"  class="form-control me-2"></td>
+                              </tr>
+                              <tr>
+                                  <td>Cabang Lomba</td>
+                                  <td>:</td>
+                                  <td>
+                                    <select  name="cabang_id" class="form-control me-2">
+                                      DATA_CABANG
+                                    </select>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-footer text-end">
+                  <button type="submit" class="btn btn-success text-white" name="btn-add">Tambah Data</button>
+                  <button type="button" class="btn btn-danger text-white"> <a href="index.php">Batal</a></button>
+              </div>
+          </form>
+      </div>
+    </div>
+    </div>
+  </div>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+            <th>JOINING DATE</th>
+            <th>COMPETITION CATEGORY</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+            DATA_MEMBERS
+        </tbody>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
